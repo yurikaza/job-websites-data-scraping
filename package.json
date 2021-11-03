@@ -6,7 +6,7 @@
   "license": "ISC",
   "description": "job finding website using node.js and axios webscrapping",
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "node ./test/test.js",
     "testTwo": "node ./test/indeedTest.js"
   },
