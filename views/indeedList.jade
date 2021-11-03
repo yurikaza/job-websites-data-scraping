@@ -1,0 +1,49 @@
+extends layout
+
+block content
+
+ .container
+    .row
+      - var isRequired = true
+      form.row.g-3(name="add-estimation", action="/users/indeed" method="POST")
+       .col-auto
+         label.visually-hidden(for='inputPassword2') Job
+         input#inputPassword2.form-control(type='text', name="namesda", placeholder='Job', required=isRequired)
+        .col-auto
+         label.visually-hidden(for='inputPassword2') Location
+         input#inputPassword2.form-control(type='text', name="locationss", placeholder='Location', required=isRequired)
+        .col-auto 
+          select#cars(name='countryss', required)
+            option(value='') USA
+            option(value='kr.') Korea
+            option(value='uk.') United Kindom
+            option(value='es.') Spain
+            option(value='jp.') Japan
+            option(value='de.') Germany
+            option(value='tr.') Turkey
+            option(value='ru.') Russian
+            option(value='pt.') Portugal
+            option(value='ca.') Canada
+            option(value='br.') Brazil
+            option(value='fr.') France
+            option(value='hk.') Hong Kong
+        .col-auto
+          button.btn.btn-primary.mb-3(type='submit') Search
+        .col-auto
+       a.navbar-brand(href='/users/downloadJsonIndeed') Download as a JSON
+     .col-auto
+       a.navbar-brand(href='/users/downloadCsvIndeed') Download as a CSV
+
+
+  each item in JoobleLists
+
+    .container
+      .row 
+        .card.mt-3.mb-3
+         h4.card-header= item.title
+         .card-body
+           h5.card-title= item.title
+           p.card-text= item.company
+           p.card-text= item.description
+           a.btn.btn-primary(href=item.link) Go Indeed
+        

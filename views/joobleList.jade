@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+ .container
+    .row
+      - var isRequired = true
+      form.row.g-3(name="add-estimation", action="/users/indeed" method="POST")
+       .col-auto
+         label.visually-hidden(for='inputPassword2') Job
+         input#inputPassword2.form-control(type='text', name="namesda", placeholder='Job', required=isRequired)
+        .col-auto
+         label.visually-hidden(for='inputPassword2') Location
+         input#inputPassword2.form-control(type='text', name="locationss", placeholder='Location', required=isRequired)
+        .col-auto
+          button.btn.btn-primary.mb-3(type='submit') Search
+        .col-auto
+       a.navbar-brand(href='/users/downloadJsonJoble') Download as a JSON
+     .col-auto
+       a.navbar-brand(href='/users/downloadCsvJoble') Download as a CSV
+
+
+  each item in JoobleLists
+
+    .container
+      .row 
+        .card.mt-3.mb-3
+         .card-body
+           h5.card-title= item.title
+           p.card-text= item.description
+           p.card-text= item.EmployerLocation
+           a.btn.btn-primary(href=item.link) Go Jooble

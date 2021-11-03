@@ -1,0 +1,41 @@
+{
+  "name": "job-post-data",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Yusuf Mirza Pıçakcı",
+  "license": "ISC",
+  "description": "job finding website using node.js and axios webscrapping",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "node ./test/test.js",
+    "testTwo": "node ./test/indeedTest.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.10",
+    "cookie-parser": "~1.4.4",
+    "csv-writer": "^1.6.0",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "~4.16.1",
+    "express-validator": "^6.13.0",
+    "fs": "^0.0.1-security",
+    "generator-go": "^0.1.1",
+    "generator-go-project": "^1.4.6",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsdom": "^18.0.1",
+    "json2csv": "^5.0.6",
+    "morgan": "~1.9.1",
+    "path": "^0.12.7",
+    "puppeteer": "^10.4.0",
+    "request-promise": "^4.2.6",
+    "yeoman-doctor": "^1.3.2",
+    "yo": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
